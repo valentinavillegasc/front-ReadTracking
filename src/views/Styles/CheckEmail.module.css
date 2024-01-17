@@ -1,0 +1,35 @@
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 96vh;
+}
+.container {
+  border: solid 2px;
+  border-color: black;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.container h1 {
+  font-size: 4rem;
+  margin: 0px 0px 10px;
+}
+.container button {
+  width: 100px;
+  height: 40px;
+  margin: 20px 0px 0px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.message h2 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.message p {
+  font-size: 1.5rem;
+  font-weight: 100;
+}

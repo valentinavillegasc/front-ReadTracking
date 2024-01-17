@@ -1,0 +1,13 @@
+.bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 50px 0px;
+}
+
+.bar h2 {
+  font-size: 2rem;
+}
+.bar p {
+  text-decoration: underline;
+}

@@ -1,0 +1,25 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  width: 300px;
+  height: 250px;
+  text-align: left;
+  background-color: rgba(158, 155, 155, 0.717);
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.logo {
+  width: 60px;
+}
+
+.card p {
+  font-size: 1rem;
+}

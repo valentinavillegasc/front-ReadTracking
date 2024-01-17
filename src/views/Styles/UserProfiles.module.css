@@ -1,0 +1,85 @@
+.bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 50px 0px;
+}
+.bar h2 {
+  font-size: 2rem;
+}
+.bar button {
+  text-decoration: underline;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+.profileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.profile {
+  background-color: grey;
+  width: fit-content;
+  padding: 20px;
+  margin: 50px;
+  border-radius: 10px;
+  color: white;
+}
+.profile img {
+  width: 200px;
+}
+
+.profile h2 {
+  font-size: 2rem;
+  margin: 20px;
+}
+
+.profile h3 {
+  font-weight: 100;
+}
+
+.signOut {
+  width: 100px;
+  height: 40px;
+  margin: 20px;
+  border: 0;
+  border-radius: 10px;
+}
+/* Edit */
+.editForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.save {
+  width: 100px;
+  height: 40px;
+  margin: 20px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.editForm label {
+  margin-top: 10px;
+}
+
+.editForm input {
+  width: 255px;
+  height: 30px;
+  font-size: 1rem;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.cancel {
+  width: 100px;
+  height: 40px;
+  margin: 20px;
+  border: 0;
+  border-radius: 10px;
+}

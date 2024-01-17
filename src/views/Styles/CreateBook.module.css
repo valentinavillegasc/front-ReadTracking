@@ -1,0 +1,20 @@
+.createBook h2 {
+  font-size: 2rem;
+  display: flex;
+  margin-left: 50px;
+}
+
+.create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  background-color: #b9b7b7;
+  width: fit-content;
+  margin: 50px;
+  padding: 20px;
+  border-radius: 10px;
+}

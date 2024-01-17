@@ -1,0 +1,86 @@
+/* Section 1 */
+.detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: fit-content;
+  margin: 50px;
+}
+.cover img {
+  width: 300px;
+  margin: 20px;
+}
+
+.titles h1 {
+  font-size: 4rem;
+}
+
+.info {
+  background-color: rgb(144, 143, 143);
+  padding: 20px;
+  margin: 50px 20px 0px;
+  border-radius: 10px;
+}
+.info h3 {
+  margin: 15px;
+}
+
+.info div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.dates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+.formats {
+  display: flex;
+  flex-direction: row;
+}
+.formatos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.format {
+  width: 80px;
+  margin: 10px;
+}
+
+/* Section 2 */
+
+.texts {
+  display: flex;
+
+  flex-direction: row;
+}
+
+.text {
+  width: 400px;
+  height: fit-content;
+  margin: 20px;
+}
+
+.text h3 {
+  text-align: left;
+  margin: 10px;
+  font-size: 2rem;
+}
+
+.text p {
+  background-color: rgb(144, 143, 143);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.quote {
+  margin: 10px;
+}

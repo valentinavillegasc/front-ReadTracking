@@ -1,0 +1,31 @@
+nav {
+  display: flex;
+  align-items: center;
+  height: 9vh;
+  padding: 8px;
+  justify-content: space-between;
+  background-color: rgba(158, 155, 155, 0.717);
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-left: 2rem;
+  font-size: 2rem;
+}
+
+.menu {
+  display: flex;
+  margin-right: 2rem;
+  gap: 20px;
+}
+
+.option {
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 150;
+}
+
+.profile {
+  width: 40px;
+}
