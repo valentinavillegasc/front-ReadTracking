@@ -14,7 +14,7 @@ export default function CreateBook() {
     pages: 0,
     startDate: "",
     endDate: "",
-    format: [],
+    format: "",
     sinopsis: "",
     review: "",
     quotes: [],
@@ -93,15 +93,13 @@ export default function CreateBook() {
   };
   //!Handle formats
   const handleFormatChange = (event) => {
-    const { name, checked } = event.target;
+    const { value } = event.target;
     setForm((prevForm) => ({
       ...prevForm,
-      format: {
-        ...prevForm.format,
-        [name]: checked,
-      },
+      format: value,
     }));
   };
+
   //! Handle cover
 
   const handleCoverChange = (e) => {
@@ -113,21 +111,22 @@ export default function CreateBook() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    console.log("Start Date:", form.startDate);
+    console.log("End Date:", form.endDate);
+
     const formSubmitData = new FormData();
     formSubmitData.append("cover", cover);
     formSubmitData.append("title", form.title);
     formSubmitData.append("author", form.author);
-    /*  formSubmitData.append("gender", form.gender.join("-")); */
+    formSubmitData.append("gender", selectedGenres);
     formSubmitData.append("stars", form.stars);
     formSubmitData.append("pages", form.pages);
-    /* formSubmitData.append("startDate", form.startDate);
-    formSubmitData.append("endDate", form.endDate); */
-    formSubmitData.append("formats.paper", form.format.paper);
-    /* formSubmitData.append("formats.audiobook", form.format.audiobook);
-    formSubmitData.append("formats.digital", form.format.digital);
-    formSubmitData.append("synopsis", form.sinopsis); */
+    formSubmitData.append("startDate", form.startDate);
+    formSubmitData.append("endDate", form.endDate);
+    formSubmitData.append("format", form.format);
+    formSubmitData.append("sinopsis", form.sinopsis);
     formSubmitData.append("review", form.review);
-    /* formSubmitData.append("quotes", JSON.stringify(form.quotes)); */
+    formSubmitData.append("quotes", quoteList);
     formSubmitData.append("UserId", id);
 
     const config = {
@@ -169,6 +168,8 @@ export default function CreateBook() {
     "Science",
     "Other",
   ];
+
+  const formats = ["Paper", "Audiobook", "Digital"];
 
   return (
     <div className={style.createBook}>
@@ -266,27 +267,20 @@ export default function CreateBook() {
           </div>
           <div>
             <p>Format</p>
-            <label htmlFor="">Paper</label>
-            <input
-              type="checkbox"
-              name="paper"
-              onChange={handleFormatChange}
-              checked={form.format.paper}
-            />
-            <label htmlFor="">Audiobook</label>
-            <input
-              type="checkbox"
-              name="audiobook"
-              onChange={handleFormatChange}
-              checked={form.format.audiobook}
-            />
-            <label htmlFor="">Digital</label>
-            <input
-              type="checkbox"
-              name="digital"
-              onChange={handleFormatChange}
-              checked={form.format.digital}
-            />
+            <label htmlFor="format">Format</label>
+            <select
+              name="format"
+              value={form.format}
+              onChange={handleFormatChange}>
+              <option value="" disabled>
+                Select a format
+              </option>
+              {formats?.map((format, index) => (
+                <option key={index} value={format}>
+                  {format}
+                </option>
+              ))}
+            </select>
           </div>
           <div>
             <label htmlFor="">Sinopsis</label>
