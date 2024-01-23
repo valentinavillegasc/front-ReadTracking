@@ -34,8 +34,8 @@ export default function Detail() {
 
           <div className={style.info}>
             <div>
-              <h3>Gender:</h3>
-              <p> {book.gender?.map((gender) => gender)}</p>
+              <h3>Genre:</h3>
+              <p> {book.genre?.map((genre) => genre)}</p>
             </div>
             <div>
               <h3>Pages: </h3>
