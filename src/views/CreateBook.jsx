@@ -9,7 +9,7 @@ export default function CreateBook() {
     cover: "",
     title: "",
     author: "",
-    gender: [],
+    genre: [],
     stars: 0,
     pages: 0,
     startDate: "",
@@ -47,10 +47,10 @@ export default function CreateBook() {
       selectedGenre,
     ]);
 
-    setForm({
-      ...form,
-      genres: "",
-    });
+    setForm((prevForm) => ({
+      ...prevForm,
+      genre: [...prevForm.genre, selectedGenre], // Modifica esta línea
+    }));
   };
 
   const handleRemoveSelectedGenre = (removedGenre) => {
@@ -113,16 +113,17 @@ export default function CreateBook() {
 
     console.log("Start Date:", form.startDate);
     console.log("End Date:", form.endDate);
+    console.log(selectedGenres);
 
     const formSubmitData = new FormData();
     formSubmitData.append("cover", cover);
     formSubmitData.append("title", form.title);
     formSubmitData.append("author", form.author);
-    formSubmitData.append("gender", selectedGenres);
+    formSubmitData.append("genre", selectedGenres);
     formSubmitData.append("stars", form.stars);
     formSubmitData.append("pages", form.pages);
-    formSubmitData.append("startDate", form.startDate);
-    formSubmitData.append("endDate", form.endDate);
+    /*  formSubmitData.append("startDate", form.startDate);
+    formSubmitData.append("endDate", form.endDate); */
     formSubmitData.append("format", form.format);
     formSubmitData.append("sinopsis", form.sinopsis);
     formSubmitData.append("review", form.review);
@@ -243,7 +244,7 @@ export default function CreateBook() {
             <label htmlFor="genres">Genres (press Enter to add)</label>
             <select
               name="genres"
-              value={form.genres}
+              value={form.genre}
               onChange={handleGenreSelect}>
               <option value="" disabled>
                 Select a genre
@@ -318,7 +319,7 @@ export default function CreateBook() {
               ))}
             </div>
           </div>
-          <button type="submit" onClick={handleSubmit}>
+          <button type="button" onClick={handleSubmit}>
             Save
           </button>
         </form>
